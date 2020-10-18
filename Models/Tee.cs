@@ -17,7 +17,7 @@ namespace GolfTrackerAPI.Models
         public long Yardage { get; set; }
         public long Slope { get; set; }
         public long Rating { get; set; }
-        public Course Course { get; set; }
+        public string CourseId { get; set; }
 
         public ICollection<Round> Round { get; set; }
 

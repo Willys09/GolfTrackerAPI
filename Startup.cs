@@ -31,6 +31,7 @@ namespace GolfTrackerAPI
             services.AddSingleton<IDatabaseSettings>(x => x.GetRequiredService<IOptions<DatabaseSettings>>().Value);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<ICourseService, CourseService>();
+            services.AddSingleton<ITeeService, TeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

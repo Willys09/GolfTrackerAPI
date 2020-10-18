@@ -21,6 +21,12 @@ namespace GolfTrackerAPI.Controllers
             _courseService = courseService;
         }
 
+        [HttpGet("/api/course/{id}")]
+        public ActionResult<Course> GetProduct(string id)
+        {
+            return _courseService.GetItem(id);
+        }
+
         [HttpGet("/api/course")]
         public ActionResult<List<Course>> GetCourseList()
         {
